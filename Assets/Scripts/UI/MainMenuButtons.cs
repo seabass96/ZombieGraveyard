@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
 public class MainMenuButtons : MonoBehaviour
 {
     public GameObject startButtton;
-    public GameObject settingButtton;
-    public GameObject ExitButtonButtton;
 
     public int bigTextSize;
     private int textSize;
@@ -43,5 +42,21 @@ public class MainMenuButtons : MonoBehaviour
         button.transform.GetChild(0).GetComponent<Text>().color = startButtonColor;
     }
 
- 
+#region button functionality
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1); //change when we set this up
+    }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
+
+    public void OpenSettingsMenu()
+    {
+
+    }
+
+ #endregion
 }
