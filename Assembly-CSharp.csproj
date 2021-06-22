@@ -57,6 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\UI\MainMenuButtons.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuMouse.cs" />
+    <Compile Include="Assets\Scripts\UI\UIHealthSystem.cs" />
+    <Compile Include="Assets\HitEffect.cs" />
+    <Compile Include="Assets\fadeOutScriptHitEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
