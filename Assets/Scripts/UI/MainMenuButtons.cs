@@ -55,7 +55,12 @@ public class MainMenuButtons : MonoBehaviour
 
     public void OpenSettingsMenu()
     {
+        GetComponent<Animator>().SetTrigger("ShowSettings");
+    }
 
+    public void BackButton()
+    {
+        GetComponent<Animator>().SetTrigger("HideSettings");
     }
 
  #endregion
