@@ -6,9 +6,8 @@ public class DamageEnemy : MonoBehaviour
 {
     public ZombieStats zombie;
     public BodyPart bodyPart;
-    public float damage;
 
-    public void TakeDamage()
+    public void TakeDamage(float damage)
     {
         zombie.TakeDamage(damage, bodyPart);
     }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7799610244453412958}
   m_Layer: 0
   m_Name: BodyCollider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,4 +59,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombie: {fileID: 0}
   bodyPart: 1
-  damage: 1
