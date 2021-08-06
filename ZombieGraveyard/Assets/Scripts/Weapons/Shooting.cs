@@ -26,6 +26,5 @@ public class Shooting : MonoBehaviour
         //raycast forward and get object hit
         //Physics.Raycast(endOfGun.position, Vector3.forward);
         Debug.DrawRay(endOfGun.position, Vector3.forward, Color.red, 3.0f);
-
     }
 }
