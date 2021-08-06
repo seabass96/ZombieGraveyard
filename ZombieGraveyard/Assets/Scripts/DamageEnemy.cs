@@ -7,7 +7,7 @@ public class DamageEnemy : MonoBehaviour
     public ZombieStats zombie;
     public BodyPart bodyPart;
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         zombie.TakeDamage(damage, bodyPart);
     }

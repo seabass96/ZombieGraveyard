@@ -6,12 +6,15 @@ public enum BodyPart { HEAD, BODY }
 
 public class ZombieStats : MonoBehaviour
 {
-    public float health;
+    public int health;
     private BodyPart lastPartHit;
-    public void TakeDamage(float damage, BodyPart part)
+    public void TakeDamage(int damage, BodyPart part)
     {
         health -= damage;
         lastPartHit = part;
+        print("HP: " + health);
+
+        if (health <= 0) Die();
     }
 
     private void Die()
