@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class GunSystem : MonoBehaviour
+public class ShootingSystem : MonoBehaviour
 {
     //Gun stats
     public int damage;
@@ -15,15 +15,21 @@ public class GunSystem : MonoBehaviour
 
     //Reference
     public Camera cam;
-    public Transform attackPoint;
+    public Transform gunEnd;
     public RaycastHit rayHit;
     public LayerMask enemyLayer;
 
     //Graphics
     //public GameObject muzzleFlash, bulletHoleGraphic;
+    //public GameObject muzzleFlash;
 
     //UI
     public Text text;
+
+
+    //Testing Audio
+    public AudioSource audio_gunshot;
+    public AudioSource audio_reload;
 
     private void Start()
     {
@@ -68,6 +74,7 @@ public class GunSystem : MonoBehaviour
     private void Shoot()
     {
         print("Bang");
+        audio_gunshot.Play();
 
         readyToShoot = false;
 
@@ -95,7 +102,7 @@ public class GunSystem : MonoBehaviour
 
         //Graphics
         //Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
-        //Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+        //Instantiate(muzzleFlash, gunEnd.position, Quaternion.identity);
 
         bulletsLeft--;
         bulletsShot--;
@@ -122,6 +129,7 @@ public class GunSystem : MonoBehaviour
     {
         bulletsLeft = magazineSize;
         reloading = false;
+        audio_reload.Play();
         UpdateAmmoText();
     }
     private void UpdateAmmoText()
