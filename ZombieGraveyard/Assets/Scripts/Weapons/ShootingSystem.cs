@@ -21,7 +21,10 @@ public class ShootingSystem : MonoBehaviour
 
     //Graphics
     //public GameObject muzzleFlash, bulletHoleGraphic;
-    //public GameObject muzzleFlash;
+    public GameObject muzzleFlash;
+    public GameObject bulletEject;
+
+    private GameObject muzzleFlashInstance;
 
     //UI
     public Text text;
@@ -102,7 +105,8 @@ public class ShootingSystem : MonoBehaviour
 
         //Graphics
         //Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
-        //Instantiate(muzzleFlash, gunEnd.position, Quaternion.identity);
+        Instantiate(muzzleFlash, gunEnd.position, Quaternion.identity);
+        Instantiate(bulletEject, gunEnd.position, Quaternion.identity);
 
         bulletsLeft--;
         bulletsShot--;
